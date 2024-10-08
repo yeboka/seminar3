@@ -84,6 +84,7 @@ function transfer (fromAccountNumber, toAccountNumber, amount) {
 }
 
 createAccount(1, "Yerbolat", 500);
+console.log('sdfgdfsgdf')
 createAccount(2, "Adilbek", 1000);
 // deposit(1, 500);
 transfer(2, 1, 250);
