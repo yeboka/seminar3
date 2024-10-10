@@ -11,6 +11,8 @@ let accounts = [];
 function createAccount (accountNumber, name, amount) {
     let isExist = accounts.some((account) => account.accountNumber === accountNumber)
 
+
+    
     if (!isExist) {
         alert(`Пользователь с айди ${accountNumber} уже существоует`);
         return;
