@@ -9,11 +9,11 @@ let accounts = [];
 // }
 
 function createAccount (accountNumber, name, amount) {
-    for(let i = 0; i < accounts.length; i++) {
-        if (accounts[i].accountNumber === accountNumber) {
-            alert(`Пользователь с айди ${accountNumber} уже существоует`);
-            return;
-        }
+    let isExist = accounts.some((account) => account.accountNumber === accountNumber)
+
+    if (!isExist) {
+        alert(`Пользователь с айди ${accountNumber} уже существоует`);
+        return;
     }
 
     let account = {
@@ -24,10 +24,6 @@ function createAccount (accountNumber, name, amount) {
 
     accounts.push(account);
     console.log(`Пользоатель ${name} успешно добвлен`, account.balance);
-    // 1. Проверить есть ли такой accountNumber уже в массиве
-    // 2. Если он есть то вывдом alert("")
-    // 3. Создаем польщователя добавляем в массиве
-    // 4. Выводим что все успешно
 }
 
 function deposit (accountNumber, amount) {
@@ -84,8 +80,9 @@ function transfer (fromAccountNumber, toAccountNumber, amount) {
 }
 
 createAccount(1, "Yerbolat", 500);
-console.log('sdfgdfsgdf')
-createAccount(2, "Adilbek", 1000);
-// deposit(1, 500);
-transfer(2, 1, 250);
-console.log(accounts);
+createAccount(1, "Yerbolat", 500);
+// console.log('sdfgdfsgdf')
+// createAccount(2, "Adilbek", 1000);
+// // deposit(1, 500);
+// transfer(2, 1, 250);
+// console.log(accounts);
