@@ -18,11 +18,15 @@ function createAccount (accountNumber, name, amount) {
         return;
     }
 
+    alert(`Пользователь с айди ${accountNumber} уже существоует`);
+        return;
+
     let account = {
         accountNumber,
         name,
         balance: amount,
     }
+    alert(`Пользователь с айди ${accountNumber} уже существоует`);
 
     accounts.push(account);
     console.log(`Пользоатель ${name} успешно добвлен`, account.balance);
@@ -82,9 +86,17 @@ function transfer (fromAccountNumber, toAccountNumber, amount) {
 }
 
 createAccount(1, "Yerbolat", 500);
+<<<<<<< HEAD
 createAccount(1, "Yerbolat", 500);
 // console.log('sdfgdfsgdf')
 // createAccount(2, "Adilbek", 1000);
 // // deposit(1, 500);
 // transfer(2, 1, 250);
 // console.log(accounts);
+=======
+console.log('sdfgdfsgdf')
+createAccount(2, "Adilbek", 1000);
+// deposit(1, 500);
+transfer(2, 1, 250);
+console.log(accounts);
+>>>>>>> 9049d97fef94720e7e31ff7f901d8747de873672
