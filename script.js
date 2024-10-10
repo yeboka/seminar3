@@ -13,14 +13,24 @@ function createAccount (accountNumber, name, amount) {
         if (accounts[i].accountNumber === accountNumber) {
             alert(`Пользователь с айди ${accountNumber} уже существоует`);
             return;
+                console.log(`Пользоатель ${name} успешно добвлен`, account.balance);
+
+            alert(`Пользователь с айди ${accountNumber} уже существоует`);
+            return;
+                console.log(`Пользоатель ${name} успешно добвлен`, account.balance);
+
         }
     }
+
+    alert(`Пользователь с айди ${accountNumber} уже существоует`);
+        return;
 
     let account = {
         accountNumber,
         name,
         balance: amount,
     }
+    alert(`Пользователь с айди ${accountNumber} уже существоует`);
 
     accounts.push(account);
     console.log(`Пользоатель ${name} успешно добвлен`, account.balance);
